@@ -54,7 +54,7 @@ public class InvoiceController {
     private void deleteFile(int customerID) throws IOException {
         // Constructs the file path
         Path filePath = Paths.get(FILE_STORAGE_BASE_PATH, "invoice_customerID_" + customerID + ".pdf").normalize();
-        // Deletes the file if it exists
+        // Deletes the file if it exi
         if (Files.exists(filePath)) {
             Files.delete(filePath);
             System.out.println("[REST API] Deleted file: " + filePath);
